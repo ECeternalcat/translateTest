@@ -55,7 +55,7 @@ translateTest/
 
 - Windows 10+
 - Python 3.10+
-- 支持 CUDA 的 NVIDIA 显卡（可选，CPU 推理亦可）
+- 支持 Vulkan 的显卡（NVIDIA / AMD / Intel 均可，CPU 推理亦可）
 - DeepSeek API Key（可选，仅云端对比需要）
 - HuggingFace Token（可选，仅 FLORES 在线拉取需要）
 
