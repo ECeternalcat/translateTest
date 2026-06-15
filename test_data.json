@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "src_lang": "fr_XX",
+    "tgt_lang": "zh_CN",
+    "source": "Le chat dort sur le canapé.",
+    "reference": "猫在沙发上睡觉。"
+  },
+  {
+    "id": 2,
+    "src_lang": "es_XX",
+    "tgt_lang": "ja_JP",
+    "source": "El sol brilla intensamente hoy.",
+    "reference": "今日は太陽が明るく輝いています。"
+  },
+  {
+    "id": 3,
+    "src_lang": "en_XX",
+    "tgt_lang": "zh_CN",
+    "source": "The weather is beautiful today.",
+    "reference": "今天天气很好。"
+  },
+  {
+    "id": 4,
+    "src_lang": "de_XX",
+    "tgt_lang": "en_XX",
+    "source": "Der Hund spielt im Garten.",
+    "reference": "The dog is playing in the garden."
+  },
+  {
+    "id": 5,
+    "src_lang": "zh_CN",
+    "tgt_lang": "en_XX",
+    "source": "人工智能正在改变世界。",
+    "reference": "Artificial intelligence is changing the world."
+  }
+]

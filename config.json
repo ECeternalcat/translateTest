@@ -1,0 +1,33 @@
+{
+  "_说明": "以下全部为可选配置，留空则自动探测。",
+
+  "deepseek_api_key": "",
+  "_deepseek_api_key_help": "DeepSeek API Key。也可通过环境变量 DEEPSEEK_API_KEY 设置（环境变量优先级更高）。",
+
+  "llama_cli_path": "",
+  "_llama_cli_path_help": "留空自动按 bin/llama-cli.exe → ./llama-cli.exe 顺序查找",
+
+  "model_path": "",
+  "_model_path_help": "留空自动在 models/ 目录下查找第一个 .gguf 文件",
+
+  "test_pairs": [
+    ["eng_Latn", "zho_Hans"],
+    ["fra_Latn", "jpn_Jpan"],
+    ["deu_Latn", "eng_Latn"]
+  ],
+  "_test_pairs_help": "FLORES-200 语言代码。常用: eng_Latn(英) zho_Hans(中) jpn_Jpan(日) fra_Latn(法) deu_Latn(德) spa_Latn(西) rus_Cyrl(俄)",
+
+  "hf_token": "",
+  "_hf_token_help": "HuggingFace Token (FLORES 数据集需要登录)。去 https://huggingface.co/settings/tokens 创建。留空则自动降级使用本地 test_data.json。",
+
+  "samples_per_pair": 50,
+  "_samples_per_pair_help": "每个语向测试句子数，最多 1012 条",
+
+  "skip_cloud_baseline": false,
+  "_skip_cloud_baseline_help": "设为 true 则跳过 DeepSeek 云端对比，仅跑本地模型",
+
+  "max_tokens": 512,
+  "temperature": 0.1,
+  "context_size": 2048,
+  "n_gpu_layers": 99
+}
