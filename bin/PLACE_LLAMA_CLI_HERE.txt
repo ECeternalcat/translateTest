@@ -1,2 +1,0 @@
-# 将 llama-cli.exe 放入此目录
-# Put llama-cli.exe here

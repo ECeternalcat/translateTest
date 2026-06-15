@@ -132,16 +132,24 @@ LANG_MAP = {
 # ============================================================
 # 启动前校验
 # ============================================================
+def ensure_dirs():
+    """自动创建缺失的目录"""
+    for d in [BASE_DIR / "bin", BASE_DIR / "models"]:
+        if not d.exists():
+            d.mkdir(parents=True, exist_ok=True)
+            print(f"  ✓ 已自动创建目录: {d.name}/")
+
+
 def preflight():
     """启动前检查，给出清晰的中文提示"""
+    ensure_dirs()
+
     ok = True
 
     if LLAMA_CLI_PATH is None:
         print("=" * 50)
         print("  ⚠ 未找到 llama-cli.exe")
-        print("  请将 llama-cli.exe 放入以下任一位置:")
-        print(f"    • {BASE_DIR / 'bin'}")
-        print(f"    • {BASE_DIR}")
+        print(f"  请将 llama-cli.exe 放入: {BASE_DIR / 'bin'}")
         print("  或在 config.json 中设置 \"llama_cli_path\"")
         print("=" * 50)
         ok = False
@@ -151,9 +159,7 @@ def preflight():
     if MODEL_PATH is None:
         print("=" * 50)
         print("  ⚠ 未找到 .gguf 模型文件")
-        print("  请将 .gguf 模型文件放入以下任一位置:")
-        print(f"    • {BASE_DIR / 'models'}")
-        print(f"    • {BASE_DIR}")
+        print(f"  请将 .gguf 模型文件放入: {BASE_DIR / 'models'}")
         print("  或在 config.json 中设置 \"model_path\"")
         print("=" * 50)
         ok = False

@@ -1,3 +1,26 @@
-/.qwen
-/models
-/__pycache__
+# Python 虚拟环境 (每台电脑需重新 setup.bat)
+llm_eval_env/
+
+# 大文件 — 测试员自行放置
+models/*.gguf
+bin/llama-cli.exe
+bin/*.exe
+
+# 评测输出
+benchmark_report.json
+flores_benchmark_report.json
+evaluation_report.json
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE / 编辑器
+.vscode/
+.idea/
+.qwen/
+
+# 系统文件
+Thumbs.db
+Desktop.ini

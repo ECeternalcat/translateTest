@@ -1,0 +1,2 @@
+# 将 .gguf 模型文件放入此目录（不会被 git 提交）
+# Put .gguf model files here (ignored by git)
